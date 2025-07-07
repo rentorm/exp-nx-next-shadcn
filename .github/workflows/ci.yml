@@ -43,5 +43,5 @@ jobs:
       - run: npx nx affected -t lint test build e2e
       
       # Nx Self-Healing CI - Automatically analyzes failures and proposes fixes
-      - run: npx nx cloud fix-ci
-        if: always()
+      # - run: npx nx cloud fix-ci
+      #   if: always()
