@@ -162,3 +162,8 @@ npx nx g @nx/react:lib my-lib --style=none
 - `tsconfig.base.json` - Base TypeScript configuration for all projects
 - `vitest.workspace.ts` - Vitest workspace configuration
 - `jest.config.ts` - Jest configuration for workspace-wide testing
+
+## Security and Compliance
+
+- **Signing Policy**: 
+  - Please do not sign any content you are adding with git. That includes commit messages, issues, text or PR descriptions.

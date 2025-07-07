@@ -9,6 +9,7 @@ on:
 permissions:
   actions: read
   contents: read
+  pull-requests: write
 
 jobs:
   main:
@@ -40,3 +41,7 @@ jobs:
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
       # When you enable task distribution, run the e2e-ci task instead of e2e
       - run: npx nx affected -t lint test build e2e
+      
+      # Nx Self-Healing CI - Automatically analyzes failures and proposes fixes
+      - run: npx nx cloud fix-ci
+        if: always()
