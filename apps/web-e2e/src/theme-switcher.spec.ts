@@ -7,7 +7,7 @@ test.describe('Theme Switcher', () => {
 
   test('should be able to switch between light and dark themes', async ({ page }) => {
     // Wait for page to load
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     // Find the theme switcher button
     const themeSwitcherButton = page.locator('button[aria-haspopup="menu"]').first();
@@ -16,20 +16,22 @@ test.describe('Theme Switcher', () => {
     // Click to open the dropdown
     await themeSwitcherButton.click();
 
-    // Verify dropdown menu items are visible
-    await expect(page.getByText('Light')).toBeVisible();
-    await expect(page.getByText('Dark')).toBeVisible();
-    await expect(page.getByText('System')).toBeVisible();
+    // Wait for dropdown to appear and verify menu items are visible
+    await page.waitForSelector('[role="menu"]', { state: 'visible' });
+    await expect(page.locator('[role="menuitem"]:has-text("Light")')).toBeVisible();
+    await expect(page.locator('[role="menuitem"]:has-text("Dark")')).toBeVisible();
+    await expect(page.locator('[role="menuitem"]:has-text("System")')).toBeVisible();
 
     // Click on Dark theme
-    await page.getByText('Dark').click();
+    await page.locator('[role="menuitem"]:has-text("Dark")').click();
 
     // Verify the dark theme is applied by checking the document class
     await expect(page.locator('html')).toHaveClass(/dark/);
 
     // Open dropdown again and select Light theme
     await themeSwitcherButton.click();
-    await page.getByText('Light').click();
+    await page.waitForSelector('[role="menu"]', { state: 'visible' });
+    await page.locator('[role="menuitem"]:has-text("Light")').click();
 
     // Verify the light theme is applied
     await expect(page.locator('html')).not.toHaveClass(/dark/);
@@ -38,21 +40,22 @@ test.describe('Theme Switcher', () => {
 
   test('should persist theme selection across page reloads', async ({ page }) => {
     // Wait for page to load
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     // Find the theme switcher button
     const themeSwitcherButton = page.locator('button[aria-haspopup="menu"]').first();
     
     // Switch to dark theme
     await themeSwitcherButton.click();
-    await page.getByText('Dark').click();
+    await page.waitForSelector('[role="menu"]', { state: 'visible' });
+    await page.locator('[role="menuitem"]:has-text("Dark")').click();
 
     // Verify dark theme is applied
     await expect(page.locator('html')).toHaveClass(/dark/);
 
     // Reload the page
     await page.reload();
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     // Verify dark theme is still applied after reload
     await expect(page.locator('html')).toHaveClass(/dark/);
@@ -60,14 +63,15 @@ test.describe('Theme Switcher', () => {
 
   test('should show system theme option and apply it', async ({ page }) => {
     // Wait for page to load
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     // Find the theme switcher button
     const themeSwitcherButton = page.locator('button[aria-haspopup="menu"]').first();
     
     // Switch to system theme
     await themeSwitcherButton.click();
-    await page.getByText('System').click();
+    await page.waitForSelector('[role="menu"]', { state: 'visible' });
+    await page.locator('[role="menuitem"]:has-text("System")').click();
 
     // Verify that either light or dark class is applied (depends on system preference)
     const htmlElement = page.locator('html');
@@ -80,14 +84,15 @@ test.describe('Theme Switcher', () => {
 
   test('should show correct checkmarks for selected theme', async ({ page }) => {
     // Wait for page to load
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     // Find the theme switcher button
     const themeSwitcherButton = page.locator('button[aria-haspopup="menu"]').first();
     
     // Switch to dark theme
     await themeSwitcherButton.click();
-    await page.getByText('Dark').click();
+    await page.waitForSelector('[role="menu"]', { state: 'visible' });
+    await page.locator('[role="menuitem"]:has-text("Dark")').click();
 
     // Open dropdown again to check for checkmark
     await themeSwitcherButton.click();

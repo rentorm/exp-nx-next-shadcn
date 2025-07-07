@@ -11,8 +11,8 @@ const mockLocalStorage = {
 };
 
 describe('ThemeProvider - System Appearance Change Detection', () => {
-  let mockMediaQueryList: any;
-  let mockMatchMedia: any;
+  let mockMediaQueryList: Partial<MediaQueryList> & { matches: boolean };
+  let mockMatchMedia: ReturnType<typeof vi.fn>;
 
   beforeEach(() => {
     // Reset mocks
@@ -135,7 +135,7 @@ describe('ThemeProvider - System Appearance Change Detection', () => {
     });
     
     // Start with dark mode preferred
-    mockMediaQueryList.matches = true;
+    mockMediaQueryList = { ...mockMediaQueryList, matches: true };
     
     function TestComponent() {
       return <div>Test Component</div>;
@@ -207,8 +207,9 @@ describe('ThemeProvider - System Appearance Change Detection', () => {
     const mockClassList = document.documentElement.classList;
     
     // Test dark mode preference
-    mockMediaQueryList.matches = true;
-    mockMatchMedia.mockReturnValue(mockMediaQueryList);
+    mockMediaQueryList = { ...mockMediaQueryList, matches: true };
+    mockMatchMedia = vi.fn().mockReturnValue(mockMediaQueryList);
+    window.matchMedia = mockMatchMedia;
     
     function TestComponent() {
       return <div>Test Component</div>;
