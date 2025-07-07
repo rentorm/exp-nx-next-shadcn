@@ -1,6 +1,6 @@
 # Styling Implementation Guide
 
-This document outlines the styling architecture and implementation for the Context Surfer Nx experiment project.
+This document outlines the styling architecture and implementation for the Nx experiment project.
 
 ## Overview
 

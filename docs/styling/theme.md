@@ -1,6 +1,6 @@
 # Theme Configuration Guide
 
-This guide explains how to configure and extend the Tailwind CSS theme system in the Context Surfer Nx project.
+This guide explains how to configure and extend the Tailwind CSS theme system in the Nx project.
 
 ## Base Theme Configuration
 

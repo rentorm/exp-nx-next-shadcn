@@ -1,6 +1,6 @@
 # Component Styling Guide
 
-This guide covers component styling patterns and utilities in the Context Surfer Nx project.
+This guide covers component styling patterns and utilities in the Nx project.
 
 ## Component Utilities
 
