@@ -1,5 +1,5 @@
-import '@my-org/shared';
-import { ThemeProvider } from '@my-org/shared';
+import '@my-org/shared/styles/globals.css';
+import { Providers } from '../components/providers';
 
 export const metadata = {
   title: 'Welcome to @my-org/web',
@@ -14,14 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

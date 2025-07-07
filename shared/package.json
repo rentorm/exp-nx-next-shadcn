@@ -12,6 +12,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./styles/globals.css": {
+      "development": "./src/styles/globals.css",
+      "import": "./dist/index.css",
+      "default": "./dist/index.css"
     }
   },
   "dependencies": {

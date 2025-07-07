@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, Card, CardHeader, CardTitle, CardDescription, CardContent, ThemeSwitcher } from '@my-org/shared';
 import { ChevronRight, Book, Globe, Youtube, Zap, Award, Terminal, Heart } from 'lucide-react';
 
@@ -34,7 +36,7 @@ export default function Index() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-2xl font-semibold">You're up and running!</h2>
+                <h2 className="text-2xl font-semibold">You&apos;re up and running!</h2>
                 <p className="text-primary-foreground/80 mt-2">
                   Your Nx monorepo with ShadCN components is ready for development.
                 </p>
