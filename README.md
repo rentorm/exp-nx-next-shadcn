@@ -1,8 +1,17 @@
-# MyOrg
+# Nx Experiment
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+An experimental Nx monorepo setup with Next.js, React, and ShadCN components for exploring modern web development patterns.
+
+## Project Overview
+
+This repository demonstrates a full-stack monorepo architecture using:
+- **Next.js 15** with React 19 for the main web application
+- **Shared component library** with Storybook for reusable UI components
+- **Tailwind CSS** for utility-first styling
+- **TypeScript** with strict type checking
+- **Comprehensive testing** with Jest, Playwright, and Vitest
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 

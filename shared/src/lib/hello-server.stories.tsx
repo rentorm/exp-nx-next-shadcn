@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from 'storybook/internal/types';
-import { expect } from 'storybook/test';
+import type { Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/jest';
 
 // Create a client-compatible wrapper for Storybook
 function HelloServerWrapper() {
