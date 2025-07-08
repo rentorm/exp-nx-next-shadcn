@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 # Run TypeScript type checking on affected projects
 pnpm nx affected -t typecheck --uncommitted
 
