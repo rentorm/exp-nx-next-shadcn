@@ -14,6 +14,10 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/web',
   testEnvironment: 'jsdom',
+  // Force Jest to exit after tests complete to handle async operations like MediaQuery listeners
+  forceExit: true,
+  // Optional: detect open handles for debugging
+  detectOpenHandles: false,
 };
 
 export default createJestConfig(config);

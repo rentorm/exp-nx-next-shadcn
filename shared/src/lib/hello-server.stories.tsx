@@ -28,7 +28,8 @@ export const Primary = {
 
 export const Heading: Story = {
   args: {},
-  play: async ({ canvas }) => {
-    await expect(canvas.getByText(/Hello Server/gi)).toBeTruthy();
+  play: async ({ canvasElement }) => {
+    const canvas = canvasElement;
+    await expect(canvas.textContent).toMatch(/Hello Server/gi);
   },
 };
