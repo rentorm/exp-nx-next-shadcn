@@ -1,6 +1,13 @@
 {
   "name": "@my-org/shared",
   "targets": {
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "shared",
+        "command": "tsc --project tsconfig.lib.json --noEmit"
+      }
+    },
     "storybook": {
       "executor": "nx:run-commands",
       "options": {
