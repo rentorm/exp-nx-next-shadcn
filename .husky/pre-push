@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Ensure builds work for affected projects
+npx nx affected:build --uncommitted
