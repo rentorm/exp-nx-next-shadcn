@@ -28,7 +28,7 @@ This is an Nx monorepo with Next.js applications and a unified ShadCN design sys
 
 ### ShadCN Integration
 - **Components Location**: `shared/src/components/ui/` contains official ShadCN components
-- **Installation Method**: Use `npx shadcn@latest add [component]` from `shared/` directory
+- **Installation Method**: Use `pnpm dlx shadcn@latest add [component]` from `shared/` directory
 - **Configuration**: `shared/components.json` contains ShadCN CLI configuration
 - **Import Path**: All components available via `@my-org/shared` import
 
@@ -57,16 +57,16 @@ import { Button, Card, CardHeader, CardTitle } from '@my-org/shared';
 ### Running Applications
 ```bash
 # Start web development server
-npx nx dev web
+pnpm nx dev web
 
 # Build web application for production
-npx nx build web
+pnpm nx build web
 
 # Start production server
-npx nx start web
+pnpm nx start web
 
 # Run Storybook for shared components
-npx nx storybook shared
+pnpm nx storybook shared
 ```
 
 ### Adding ShadCN Components
@@ -75,10 +75,10 @@ npx nx storybook shared
 cd shared
 
 # Add new ShadCN components (automatically available in all apps)
-npx shadcn@latest add input
-npx shadcn@latest add dialog
-npx shadcn@latest add dropdown-menu
-npx shadcn@latest add form
+pnpm dlx shadcn@latest add input
+pnpm dlx shadcn@latest add dialog
+pnpm dlx shadcn@latest add dropdown-menu
+pnpm dlx shadcn@latest add form
 
 # Export new components in shared/src/index.ts
 export * from './components/ui/input';
@@ -88,47 +88,47 @@ export * from './components/ui/dialog';
 ### Testing
 ```bash
 # Run all tests
-npx nx test
+pnpm nx test
 
 # Run tests for specific project
-npx nx test web
-npx nx test shared
+pnpm nx test web
+pnpm nx test shared
 
 # Run e2e tests
-npx nx e2e web-e2e
+pnpm nx e2e web-e2e
 
 # Run Storybook tests
-npx nx test-storybook shared
+pnpm nx test-storybook shared
 ```
 
 ### Code Quality
 ```bash
 # Lint all projects
-npx nx lint
+pnpm nx lint
 
 # Lint specific project
-npx nx lint web
+pnpm nx lint web
 
 # Type check all projects
-npx nx typecheck
+pnpm nx typecheck
 
 # Type check specific project
-npx nx typecheck web
+pnpm nx typecheck web
 ```
 
 ### Project Management
 ```bash
 # Show available targets for a project
-npx nx show project web
+pnpm nx show project web
 
 # View dependency graph
-npx nx graph
+pnpm nx graph
 
 # Generate new Next.js app (inherits design system)
-npx nx g @nx/next:app my-app --style=none
+pnpm nx g @nx/next:app my-app --style=none
 
 # Generate new React library
-npx nx g @nx/react:lib my-lib --style=none
+pnpm nx g @nx/react:lib my-lib --style=none
 ```
 
 ## Development Guidelines

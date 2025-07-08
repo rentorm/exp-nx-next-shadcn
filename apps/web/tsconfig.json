@@ -17,7 +17,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@my-org/shared": ["../../shared/dist"]
     },
     "types": ["jest", "node"],
     "outDir": "dist",

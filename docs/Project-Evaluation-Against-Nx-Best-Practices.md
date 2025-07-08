@@ -43,7 +43,7 @@ my-workspace/
 #### ShadCN Integration vs Traditional Patterns
 
 **Current Approach (ShadCN)**:
-- Components installed via CLI: `npx shadcn@latest add [component]`
+- Components installed via CLI: `pnpm dlx shadcn@latest add [component]`
 - Uses Class Variance Authority (CVA) for type-safe variants
 - Direct ownership of component code
 - Modern composition patterns with Radix UI primitives

@@ -75,8 +75,8 @@ test.describe('Theme Switcher', () => {
 
     // Verify that either light or dark class is applied (depends on system preference)
     const htmlElement = page.locator('html');
-    const hasLightClass = await htmlElement.evaluate(el => el.classList.contains('light'));
-    const hasDarkClass = await htmlElement.evaluate(el => el.classList.contains('dark'));
+    const hasLightClass = await htmlElement.evaluate(el => (el as HTMLElement).classList.contains('light'));
+    const hasDarkClass = await htmlElement.evaluate(el => (el as HTMLElement).classList.contains('dark'));
     
     // At least one should be true (system preference should be applied)
     expect(hasLightClass || hasDarkClass).toBeTruthy();
