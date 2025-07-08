@@ -2,7 +2,10 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Run linting on affected projects
-pnpm nx affected:lint --uncommitted
+pnpm nx affected -t lint --uncommitted
+
+# Run TypeScript type checking on affected projects
+pnpm nx affected -t typecheck --uncommitted
 
 # Run tests on affected projects
-pnpm nx affected:test --uncommitted
+pnpm nx affected -t test --uncommitted

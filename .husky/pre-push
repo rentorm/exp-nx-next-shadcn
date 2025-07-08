@@ -1,11 +1,14 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Run TypeScript type checking on affected projects
+pnpm nx affected -t typecheck --uncommitted
+
 # Ensure builds work for affected projects
-pnpm nx affected:build --uncommitted
+pnpm nx affected -t build --uncommitted
 
 # Run E2E tests on affected projects
-pnpm nx affected:e2e --uncommitted
+pnpm nx affected -t e2e --uncommitted
 
 # Run Storybook tests on affected projects
-pnpm nx affected --target=test-storybook --uncommitted
+pnpm nx affected -t test-storybook --uncommitted
