@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__nx-mcp__nx_project_details"
+    ],
+    "deny": []
+  }
+}

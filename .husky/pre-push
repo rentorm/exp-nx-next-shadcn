@@ -3,3 +3,9 @@
 
 # Ensure builds work for affected projects
 npx nx affected:build --uncommitted
+
+# Run E2E tests on affected projects
+npx nx affected:e2e --uncommitted
+
+# Run Storybook tests on affected projects
+npx nx affected --target=test-storybook --uncommitted
