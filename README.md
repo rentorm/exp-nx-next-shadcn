@@ -4,6 +4,8 @@
 
 An experimental Nx monorepo setup with Next.js, React, and ShadCN components for exploring modern web development patterns.
 
+<!-- CI Performance Test: Evaluating optimized GitHub Actions workflow with Nx Cloud distribution and caching improvements -->
+
 ## Project Overview
 
 This repository demonstrates a full-stack monorepo architecture using:
