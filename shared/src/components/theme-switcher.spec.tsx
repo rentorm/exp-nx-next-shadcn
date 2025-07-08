@@ -4,7 +4,7 @@ import { ThemeSwitcher } from './theme-switcher';
 
 // Mock the theme context
 const mockSetTheme = vi.fn();
-let mockTheme = 'system';
+const mockTheme = 'system';
 
 vi.mock('./theme-provider', async () => {
   const actual = await vi.importActual('./theme-provider');
