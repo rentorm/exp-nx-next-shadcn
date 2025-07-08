@@ -2,7 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Run linting on affected projects
-npx nx affected:lint --uncommitted
+pnpm nx affected:lint --uncommitted
 
 # Run tests on affected projects
-npx nx affected:test --uncommitted
+pnpm nx affected:test --uncommitted

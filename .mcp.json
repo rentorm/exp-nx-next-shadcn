@@ -5,9 +5,9 @@
     },
     "sequential-thinking": {
       "type": "stdio",
-        "command": "npx",
+        "command": "pnpm",
         "args": [
-          "-y",
+          "dlx",
           "@modelcontextprotocol/server-sequential-thinking"
         ]
       }

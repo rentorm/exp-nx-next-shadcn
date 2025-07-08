@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "mcp__nx-mcp__nx_project_details"
+      "mcp__nx-mcp__nx_project_details",
+      "Bash(pnpm:*)"
     ],
     "deny": []
   }

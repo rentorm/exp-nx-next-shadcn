@@ -2,10 +2,10 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Ensure builds work for affected projects
-npx nx affected:build --uncommitted
+pnpm nx affected:build --uncommitted
 
 # Run E2E tests on affected projects
-npx nx affected:e2e --uncommitted
+pnpm nx affected:e2e --uncommitted
 
 # Run Storybook tests on affected projects
-npx nx affected --target=test-storybook --uncommitted
+pnpm nx affected --target=test-storybook --uncommitted

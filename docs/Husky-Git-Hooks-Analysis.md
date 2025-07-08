@@ -54,7 +54,7 @@ The project has these Nx targets perfect for Git hooks:
 
 ### Project Structure Compatibility
 - **Monorepo setup**: Nx workspace with apps/* and shared library
-- **Package management**: npm workspaces with proper dependency isolation
+- **Package management**: pnpm workspaces with proper dependency isolation
 - **TypeScript**: Strict configuration with proper path aliases
 - **Modern stack**: React 19, Next.js 15, latest tooling versions
 
@@ -91,23 +91,23 @@ The project has these Nx targets perfect for Git hooks:
 ### Phase 1: Basic Setup (30 minutes)
 ```bash
 # Install Husky
-npm install husky --save-dev
+pnpm add -D husky
 
 # Initialize Husky
-npx husky install
+pnpm dlx husky install
 
 # Add prepare script to package.json
-npm pkg set scripts.prepare="husky"
+pnpm pkg set scripts.prepare="husky"
 ```
 
 ### Phase 2: Essential Hooks (1 hour)
 ```bash
 # Pre-commit: Run linting and tests on affected projects
-npx husky add .husky/pre-commit "npx nx affected:lint --uncommitted"
-npx husky add .husky/pre-commit "npx nx affected:test --uncommitted"
+pnpm dlx husky add .husky/pre-commit "pnpm nx affected:lint --uncommitted"
+pnpm dlx husky add .husky/pre-commit "pnpm nx affected:test --uncommitted"
 
 # Pre-push: Ensure builds work
-npx husky add .husky/pre-push "npx nx affected:build --uncommitted"
+pnpm dlx husky add .husky/pre-push "pnpm nx affected:build --uncommitted"
 ```
 
 ### Phase 3: Advanced Features (optional)

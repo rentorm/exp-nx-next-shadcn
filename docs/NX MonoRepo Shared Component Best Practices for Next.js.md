@@ -191,7 +191,7 @@ Use CSS Modules for component-scoped styling:
 Alternative approach using styled-components:
 
 ```typescript
-// Install: npm install styled-components
+// Install: pnpm add styled-components
 import styled from 'styled-components';
 
 export const StyledButton = styled.button<{ $variant: string }>`

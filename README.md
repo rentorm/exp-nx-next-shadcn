@@ -45,7 +45,7 @@ This repository demonstrates a full-stack monorepo architecture using:
 - **Testing**: Jest (unit), Playwright (e2e), Vitest (library)
 - **Development**: Storybook for component development and documentation
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `pnpm nx graph` to visually explore what was created. Now, let's get you up to speed!
 
 ## Finish your CI setup
 
@@ -57,25 +57,25 @@ This repository demonstrates a full-stack monorepo architecture using:
 ### Development
 ```bash
 # Start the web application
-npx nx dev web
+pnpm nx dev web
 
 # Run Storybook for component development
-npx nx storybook shared
+pnpm nx storybook shared
 
 # View the dependency graph
-npx nx graph
+pnpm nx graph
 ```
 
 ### Building
 ```bash
 # Build for production
-npx nx build web
+pnpm nx build web
 
 # Build the shared library
-npx nx build shared
+pnpm nx build shared
 
 # Run all tests
-npx nx test
+pnpm nx test
 ```
 
 ### Adding ShadCN Components
@@ -84,9 +84,9 @@ npx nx test
 cd shared
 
 # Add new ShadCN components
-npx shadcn@latest add input
-npx shadcn@latest add dialog
-npx shadcn@latest add dropdown-menu
+pnpm dlx shadcn@latest add input
+pnpm dlx shadcn@latest add dialog
+pnpm dlx shadcn@latest add dropdown-menu
 
 # Components are automatically available in all apps via @my-org/shared
 ```
@@ -94,13 +94,13 @@ npx shadcn@latest add dropdown-menu
 ### Code Quality
 ```bash
 # Run linting
-npx nx lint
+pnpm nx lint
 
 # Run type checking
-npx nx typecheck
+pnpm nx typecheck
 
 # Run end-to-end tests
-npx nx e2e web-e2e
+pnpm nx e2e web-e2e
 ```
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
@@ -148,7 +148,7 @@ document.documentElement.classList.toggle('dark');
 ### Adding New Applications
 ```bash
 # Generate a new Next.js app with our design system
-npx nx g @nx/next:app mobile --style=none
+pnpm nx g @nx/next:app mobile --style=none
 
 # The new app will automatically inherit:
 # - Tailwind configuration from tailwind.config.base.js
@@ -159,7 +159,7 @@ npx nx g @nx/next:app mobile --style=none
 ### Adding New Libraries
 ```bash
 # Generate a new React library
-npx nx g @nx/react:lib feature-auth --style=none
+pnpm nx g @nx/react:lib feature-auth --style=none
 
 # Libraries can use shared components:
 import { Button, Input } from '@my-org/shared';
