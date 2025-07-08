@@ -46,11 +46,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile --prefer-offline
 
-      # This enables task distribution via Nx Cloud
-      # Run this command as early as possible, after dependencies are installed
-      # Learn more at https://nx.dev/ci/reference/nx-cloud-cli#npx-nxcloud-startcirun
-      - run: pnpm nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
-
       # Cache Playwright browsers
       - name: Cache Playwright browsers
         uses: actions/cache@v4
