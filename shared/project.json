@@ -1,0 +1,19 @@
+{
+  "name": "@my-org/shared",
+  "targets": {
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "shared",
+        "command": "storybook dev --port 6006"
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "shared",
+        "command": "test-storybook --url=http://localhost:6006"
+      }
+    }
+  }
+}
