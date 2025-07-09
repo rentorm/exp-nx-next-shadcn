@@ -1,5 +1,6 @@
 {
   "name": "@my-org/shared",
+  "tags": ["type:lib", "scope:ui"],
   "targets": {
     "typecheck": {
       "executor": "nx:run-commands",
