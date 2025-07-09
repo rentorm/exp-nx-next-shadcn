@@ -22,5 +22,5 @@
       "dependsOn": ["^build"]
     }
   },
-  "tags": []
+  "tags": ["type:app", "scope:web"]
 }

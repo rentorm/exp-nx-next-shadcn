@@ -1,7 +1,6 @@
 # Project Evaluation Against Nx Monorepo Best Practices
 
 **Date**: July 2025 (Updated: July 9, 2025)  
-**Evaluator**: Claude Code  
 **Project**: Nx Next.js ShadCN Monorepo
 
 ## Executive Summary

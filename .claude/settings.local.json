@@ -3,7 +3,8 @@
     "allow": [
       "mcp__nx-mcp__nx_project_details",
       "Bash(pnpm:*)",
-      "Bash(gh pr checks:*)"
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr view:*)"
     ],
     "deny": []
   }
