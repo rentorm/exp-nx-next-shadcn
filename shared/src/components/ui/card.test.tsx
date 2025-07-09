@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { describe, it, expect, vi } from 'vitest';
 
 describe('Card', () => {
-  describe('Card', () => {
+  describe('Card component', () => {
     it('renders card with content', () => {
       render(<Card>Card content</Card>);
       expect(screen.getByText('Card content')).toBeInTheDocument();
